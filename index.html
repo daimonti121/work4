@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <!-- catalog -->
+  <div class="catalog">
+
+    <!-- offer -->
+    <div class="offer">
+      <img src="image/image-icn1.png" alt="offer">
+      <h4>Надежно</h4>
+      <div class="offer__text">
+        <span>
+          <small>
+            В Coral Travel работают профессионалы с многолетним опытом, которым вы можете доверить свой долгожданный
+            отдых. Наши специалисты подберут тур с учетом всех ваших пожеланий, оформят документы и порекомендуют, чем
+            заняться в стране отдыха.
+          </small>
+        </span>
+      </div>
+    </div>
+
+    <!-- offer -->
+    <div class="offer">
+      <img src="image/uah.png" alt="offer">
+      <h4>Выгодно</h4>
+      <div class="offer__text">
+        <span>
+          <small>
+            Среди предложений Coral Travel множество акций, которые помогут сделать ваш отдых наиболее выгодным. Это и
+            сезонные акции, например, «Раннее бронирование», и специальные предложения от отелей-партнеров.
+          </small>
+        </span>
+      </div>
+    </div>
+
+    <!-- offer -->
+    <div class="offer">
+      <img src="image/image-icn3.png" alt="offer">
+      <h4>Отдых для всех</h4>
+      <div class="offer__text">
+        <span>
+          <small>
+            Семьи с детьми всех возрастов, туристы старшего поколения, молодежные компании, влюбленные пары и
+            одиночные путешественники – для всех категорий мы предложим качественный и интересный отдых.
+          </small>
+        </span>
+      </div>
+    </div>
+
+    <!-- offer -->
+    <div class="offer">
+      <img src="image/image-icn4.png" alt="offer">
+      <h4>Большой выбор</h4>
+      <div class="offer__text">
+        <span>
+          <small>
+            Coral Travel предлагает туры на любой вкус: пляжные, экскурсионные, комбинированные, горнолыжные,
+            корпоративные, элитные. Также в ассортименте представлены перелеты рейсами ведущих авиакомпаний мира.
+          </small>
+        </span>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (начало) -->
+  <div style="width: 973px;height: 746px" id="maphed3vgpg"></div>
+  <script src="//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=GoogleReadyHandlerhed3vgpg" async defer>
+  </script>
+  <script>
+    function GoogleReadyHandlerhed3vgpg() {
+      var infoWindow, m = new google.maps.Map(document.getElementById("maphed3vgpg"), {
+          center: {
+            lat: -3.210465520313376,
+            lng: 55.86618992963126
+          },
+          zoom: 2,
+          disableDefaultUI: true,
+          zoomControl: true,
+          mapTypeControl: true,
+          mapTypeId: "roadmap"
+        }),
+        p = google.maps.Marker,
+        d = decodeURIComponent,
+        w = [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEvElEQVRoQ+2aXWhcRRTH/+feu2kSjdXamHY3ShQR+yIoiLYVbI1UbQPi3TWlL0ItFUolKhgRH9SHih+IXwiCbRG0Utju3tDalmotia3gQ0HRF1Eiit6NRku1ibSme+cemf3QNd2PmdmbLYbO656v35yZuefMLGGeDJonHLgA0iiT3Wlc3B5DT6Uc5/G7P4iTjXRNfo80I0s9LLPYHgYwAKC7RkB/gnGMgDf9y8VHWI3AJPDZOpGAxDO4nsjeDmAFAEsjsHFiPOknhQcCa+idI9ocCIN6R6wnmOlZAO2GgYQM7D7riC0n7sW0oQ3zzd73DtrPdtlvEGGTZhZqxXo8IDEw6eJXExizjDAo4TmvADwUEUQpdv4ioPBuExgjkLhnbSWmVwHETGavgc6+2JRY/8NG/KVjWxtkaTZ2k4XwQwCLFR2dAhACWKiYvTwxtvopIQ8P5aEHUlhS9h4AyQYexpnxdNu0GPlnZkfhXHnSWRGCnwdwa10o5m8oDPv9QeRUSbRA4p5zG0I+QIRLajgImbGzbVoM1Vwa8qTzrIcZ9FKdky4E8eM5N5TLV2logSQ85zUwP1LH8lu5RWJI5SPXaJ8xcLSzQ6wZX4sZFRJlEFlytNn2xwBuqWpYczlcexALzpy2M6BCFXDOYOAXInF7zsW3kYL0pHG1Y9ufAohXdUw8POGGL6s4LcskPHsAjDSAjip6p4ko6bvBIRWbyhlJeM5yMB8EcGkVw3+AaG3ODT5TcVqW6U5jSZvtfALwddX0CNjsJ8UOFZvKIPE9zhoiljXRRVUMT1qWWPnTffhOxWlZ5po0Fs7Y1ihAN14AKc2AckYSWWc1wHsBdP2vl9Z52OwzBGzwk2JEZbkqZ2TeHL9yVhJZ5zmAn2rFBxGMIx2dYl3kH0QZfKmVPSyZasBEVaLkibDRd8X7KstKyigvrbLBeMZ+mwibGzgYJ+BFZ0rsMioageMzjujX6Ri1QQzL+DyARYplfADCppwr3lXNhlFGUCzldwNYr+NIXZa/JBHeoXttpJ0RGZBCOa8e938ltcv3sroRSCkrKg2WHpBmBV1p3AxEHlv1K1c9gKJ0SMzb/FT4jImyMUipnzgAQr+J4yo6PwZCrJocxPcm9oxBpLNez3aZsatGP6EXD9HrOTd4VE/pX+mmQBbvRdeCwJY3KstNAyjp/UYs7vRT+MrUTlMg0mnCsx8AYycAxzQIZmyfSImHTPXNviOzvJWycgTAzYaBnAhh3fVzMv+5oX5BremMFLNiPQYm2a/r3MSX487mXHH/+b2NL4XS4+EKh60xgJbpzCozpmDRugk3kJcaTY1IMiIjiGesYSJ6QSsrjP0dnSKlWqrXI40MZMkI+uzQHgXQpzi1Z0AYzLliv6J8XbHIQAp7pXHjVXnwj8VOiXt0b91r0UQKUurrxwBc1WCWtRunRlmLFKS4V5QaL+3GqeUgvRncwFS4I671qmvUOLUcRJb4vVl7BxMerO6cvw4oXGXyvNaSU6vSSTzrrCTwBwAum+XcuHFqfUakx+Jj6TaA5Z8Hyu+M8hl6X9uU2BDVSVUJF/lmrzQuLyoI4RYitLOg9yZSweFmS5GWHL+N0j+Xv89pRuYy8Nm25w3I3yoI5EJKubT4AAAAAElFTkSuQmCC"
+        ];
+      infoWindow = new google.maps.InfoWindow();
+      (new p({
+        position: {
+          lat: 54.37279334727377,
+          lng: 34.96901594694092
+        },
+        map: m,
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B01")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new p({
+        position: {
+          lat: 34.74871425292972,
+          lng: -3.35129655305908
+        },
+        map: m,
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B02")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new p({
+        position: {
+          lat: 39.51070900247846,
+          lng: 94.38307844694091
+        },
+        map: m,
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B03")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new p({
+        position: {
+          lat: 19.15333277600126,
+          lng: 56.59010969694092
+        },
+        map: m,
+        icon: w[0],
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B04")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%0A%3Cp%3E%D0%A2%D0%BE%D1%87%D0%BA%D0%B0%3C%2Fp%3E"));
+        infoWindow.open(m, this);
+      });
+      (new p({
+        position: {
+          lat: 25.475620849098057,
+          lng: 2.800513288457016
+        },
+        map: m,
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B05")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new p({
+        position: {
+          lat: 5.957677510354169,
+          lng: 7.722388288457016
+        },
+        map: m,
+        title: d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B06")
+      })).addListener('click', function (e) {
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new google.maps.Circle({
+        center: {
+          lat: 34.88985795668028,
+          lng: -24.688213586946862
+        },
+        radius: 633904.4717358771,
+        map: m,
+        strokeColor: "#1e98ff",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#1e98ff",
+        fillOpacity: 0.35,
+        title: d("%D0%9A%D1%80%D1%83%D0%B37")
+      })).addListener('click', function (e) {
+        infoWindow.setPosition({
+          "lat": 34.88985795668028,
+          "lng": -24.688213586946862
+        });
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new google.maps.Rectangle({
+        bounds: {
+          "north": 69.41416338098763,
+          "south": 62.27178794068628,
+          "west": 23.709169173901373,
+          "east": 58.86541917390137
+        },
+        map: m,
+        strokeColor: "#1e98ff",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#1e98ff",
+        fillOpacity: 0.35,
+        title: d("%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA8")
+      })).addListener('click', function (e) {
+        infoWindow.setPosition({
+          "lat": 69.41416338098763,
+          "lng": 23.709169173901373
+        });
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      (new google.maps.Polyline({
+        path: [{
+          "lat": 65.51640547206084,
+          "lng": 91.56073167390137
+        }, {
+          "lat": 48.23020656742205,
+          "lng": 66.95135667390137
+        }, {
+          "lat": 26.12344458109605,
+          "lng": 113.70916917390137
+        }, {
+          "lat": 8.763004823638054,
+          "lng": 60.97479417390137
+        }, {
+          "lat": -7.0054230169430465,
+          "lng": -12.853330826098626
+        }],
+        map: m,
+        strokeColor: "#1e98ff",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#1e98ff",
+        fillOpacity: 0.35,
+        title: d("%D0%9B%D0%B8%D0%BD%D0%B8%D1%8F9")
+      })).addListener('click', function (e) {
+        infoWindow.setPosition({
+          "lat": 65.51640547206084,
+          "lng": 91.56073167390137
+        });
+        infoWindow.setContent(d("%D0%A2%D0%BE%D1%87%D0%BA%D0%B0"));
+        infoWindow.open(m, this);
+      });
+      return m;
+    }
+  </script>
+  <div style="text-align: right;"><a href="https://maps-creator.com" target="_blank"
+      style="color: #ccc; font: 13px Arial, Helvetica, sans-serif;">создано с помощью конструктора maps-creator.com</a>
+  </div>
+  <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+
+
+</body>
+
+</html>
